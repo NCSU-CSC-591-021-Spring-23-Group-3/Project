@@ -9,6 +9,15 @@
 # About
 This repo is an extension of the [Homeworks](https://github.com/NCSU-CSC-591-021-Spring-23-Group-3/Homeworks) repo and contains the final project of CSC 591 021 Spring 23 <b>Group 3</b>.
 
+### Major Contributions
+1. Data Imputation and Label Encoding
+2. Sway using 3 new algos: PCA (sway2), Agglomerative (sway3), KMeans (sway4)
+3. Explanation using Decision Trees (xpln1,2,3,4)
+4. Calculate and visualize sampling tax, explanation tax, explanation variance
+5. Hyperparameter tuning using 2 methods: 1. Minimal Sampling 2. Hyperopt
+6. Attempted to replace Zitzler predicate with BDOM, but failed
+7. Significance tests using Kruskal-Wallis, Mann-Whitney and also used cliff's delta
+
 # Steps to run
   1. Install Python 3.10.6
   2. Run ```pip install -r requirements.txt```
@@ -17,6 +26,25 @@ This repo is an extension of the [Homeworks](https://github.com/NCSU-CSC-591-021
   Run project for default file of *auto2.csv* -  ```python main.py```<br/>
   Run project for custom file of *auto93.csv* - ```python main.py -f ../etc/data/auto93.csv```<br/>
   Run project for custom file and run test cases too - ```python main.py -f ../etc/data/auto2.csv -g all```<br/>
+  ```
+USAGE: python main.py  [OPTIONS] [-g ACTION]
+
+OPTIONS:
+  -b  --bins    initial number of bins       = 16
+  -c  --cliffs  cliff's delta threshold      = .147
+  -d  --d       different is over sd*d       = .35
+  -f  --file    data file                    = ../etc/data/auto2.csv
+  -F  --Far     distance to distant          = .95
+  -g  --go      start-up action              = nothing
+  -h  --help    show help                    = false
+  -H  --Halves  search space for clustering  = 512
+  -m  --min     size of smallest cluster     = .5
+  -M  --Max     numbers                      = 512
+  -p  --p       dist coefficient             = 2
+  -r  --rest    how many of rest to sample   = 10
+  -R  --Reuse   child splits reuse a parent pole = true
+  -s  --seed    random number seed           = 937162211
+  ```
   
 # Files
   1. The <b>Report</b> is present at [/docs/Report.pdf](https://github.com/NCSU-CSC-591-021-Spring-23-Group-3/Project/tree/main/docs/Report.pdf) folder
